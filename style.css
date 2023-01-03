@@ -11,9 +11,17 @@
     --title-color: #000;
 }
 
+.dark-theme{
+    --background-color: #000;
+    --text-color: #999;
+    --title-color: #fff;
+
+}
+
 body{
     background: var(--background-color);
     color: var(--text-color);
+    transition: background 0.8s, color 0.8s;
 }
 
 .header{
@@ -30,8 +38,8 @@ nav{
     padding: 10px 0;
 }
 
-.logo imag{
-    width: 80px;
+.logo images{
+    width: 40px;
 }
 
 nav ul{
@@ -52,3 +60,89 @@ nav ul li a{
     font-weight: 500;
 }
 
+.toggle-btn{
+    background: #4864ff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.toggle-btn img{
+    width: 25px;
+    margin-left: 10px;
+
+}
+
+.content{
+    margin-top: 70px;
+    max-width: 700px;
+    font-size: 30px;
+}
+
+.content h1{
+    font-size: 70px;
+    font-family: sherif;
+    color: var(--title-color);
+    font-weight: 400px;
+}
+
+.content a{
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 40px;
+    text-decoration: none;
+}
+.image-box img{
+    width:700px;
+    display:block;
+}
+
+.image-box{
+    position: absolute;
+    bottom:30%;
+    right: 10%;
+}
+
+.pattern{
+    position: absolute;
+    top: 0;
+    left:50%;
+    display: flex;
+    transform: rotate(40deg);
+    z-index: -1;
+}
+
+.pattern img{
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left:0;
+    animation: move 1s linear infinite alternate-reverse;
+}
+.pattern img:nth-child(1){
+    transform: rotate(-45deg) translate(-70px, -50px);
+    animation-delay: 1s;
+}
+.pattern img:nth-child(2){
+    transform: rotate(65deg) translate(0px, -40px) scale(.8);
+    animation-delay: 2s;
+
+}
+
+@keyframes move {
+    100%{
+        margin-left: 40px;
+        margin-top: 20px;
+        opacity: 0.3;
+    }
+    
+}
